@@ -1,9 +1,5 @@
-# Install K3d on your machine
+# Install k3d on your machine
 
-## Pre-requisite
-Install docker engine
-
-##### For Linux machines 
-$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
+## 1. Install pre-requisites
+Install Docker Engine / Docker Desktop
 
