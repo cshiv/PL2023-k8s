@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-busybox
+  labels:
+    app: deploy-busybox # LABEL-A: <--this label is to manage the deployment itself. this may be used to filter the deployment based on this label. 
+spec:              
+  replicas: 2
+  selector:
+    matchLabels:
+      app: busybox    #LABEL-B:  <--  field defines how the Deployment finds which Pods to manage.
+  template:
+    metadata:
+      labels:
+        app: busybox   #LABEL-C: <--this is the label of the pod, this must be same as LABEL-B
+    spec:                
+      containers:
+      - name: my-busybox
+        image: busybox:latest
+        args:
+        - sleep
+        - "3600"        
+
+
