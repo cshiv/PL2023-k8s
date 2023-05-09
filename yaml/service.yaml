@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-nginx
+spec:
+  ports:
+  - port: 80           # Port of the Service. As targetPort is not present, routing will be done to same port in container
+  selector:
+    app: my-nginx      # Route to pods with label app:my-nginx

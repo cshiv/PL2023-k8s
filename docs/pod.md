@@ -1,6 +1,6 @@
 ## 1. Creating a Pod
 
-#### Run a Pod Imperatively
+#### 1.1 Run a Pod Imperatively
 
 Run a Pod
 ```
@@ -19,7 +19,7 @@ Delete the Pod
 kubectl delete pod busybox
 ```
 
-#### Run your Pod Declaratively
+#### 1.2 Run your Pod Declaratively
 
 See the Yaml file by dry-run
 
@@ -58,7 +58,7 @@ Check if the Pod is Running
 kubectl get pods
 ```
 
-#### Helper commands for more information
+#### 1.3 Helper commands for more information
 
 Check the details of fields
 ```
@@ -98,7 +98,7 @@ kubectl get pod
 kubectl get po
 kubectl get Pod
 ```
-#### Some more operations
+#### 1.4 Some more operations
 
 Execute a command in the container
 ```
