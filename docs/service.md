@@ -35,3 +35,5 @@ kubectl port-forward service/service-nginx 8080:80
 Using 8080 as port 80 will generally be bound
 
 Open the nginx webpage by hitting the URL `127.0.0.1:8080` or `curl 127.0.0.1:8080`
+
+NOTE: kubectl port-forward doesn't do loadbalancing unlike regular :(
