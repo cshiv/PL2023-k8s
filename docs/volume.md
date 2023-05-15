@@ -52,17 +52,17 @@ mysql -u root -ppassword
 
 Show the databases present
 ```
-show databases
+show databases;
 ```
 
 Create a database by name `perconalive_2023`
 ```
-create database perconalive_2023
+create database perconalive_2023;
 ```
 
 Validate the database creation
 ```
-show databases
+show databases;
 ```
 
 Exit the mysql prompt and container by exit.
@@ -97,7 +97,7 @@ kubectl get po
 
 Once the pod is in running state, exec into the container
 ```
-kubectl exec -ti mysql-1 -- bash
+kubectl exec -ti mysql-2 -- bash
 ```
 
 ##### Commands in mysql container
@@ -109,5 +109,7 @@ mysql -u root -ppassword
 
 Check if `perconalive_2023` database is present
 ```
-show databases
+show databases;
 ```
+
+Observe the data is retained eventhough the initial pod was deleted.
