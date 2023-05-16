@@ -1,0 +1,10 @@
+# Headless Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-regular
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: mysql        # Route traffic to pod with app:sts label
