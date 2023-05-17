@@ -20,7 +20,7 @@ kubectl get service
 
 Create a StatefulSet
 ```
-kubectl apply -f https://raw.githubusercontent.com/cshiv/PL2023-k8s/main/yaml/stateful.yaml
+kubectl apply -f https://raw.githubusercontent.com/cshiv/PL2023-k8s/main/yaml/statefulset.yaml
 ```
 
 Check the status of StatefulSet 
@@ -45,7 +45,7 @@ As you can see k8s automatically creates the pod and ensure replica of stateful 
 
 Run a mysql client pod to connect to DB
 ```
-kubectl run client --image=percona:8.0 -ti -- bash
+kubectl run client --image=mysql -ti -- bash
 ```
 
 #### Comands inside the container
@@ -89,6 +89,8 @@ Observe that it's a standalone node, but not a part of cluster.
 ```
 select * from performance_schema.replication_group_members;
 ```
+Observe the empty set. Server is running in standalone mode.
+
 Exit from the mysql prompt
 ```
 exit
@@ -117,8 +119,6 @@ Check the hostname
 ```
 select @@hostname;
 ```
-
-Repeat the above 2 commands after exiting mysql prompt and observe a different host being hit.
 
 
 

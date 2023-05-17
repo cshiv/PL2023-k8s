@@ -28,7 +28,7 @@ Check the command
 kubectl port-forward --help
 ```
 
-Port-forward to the service
+Open a new terminal and Port-forward to the service
 ```
 kubectl port-forward service/service-nginx 8080:80
 ```

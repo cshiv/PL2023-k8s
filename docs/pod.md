@@ -50,6 +50,7 @@ spec:
 status: {}
 ```
 
+
 ``` 
 kubectl apply -f pod.yaml
 ```
@@ -109,12 +110,17 @@ Create an interactive terminal to the container
 ```
 kubectl exec busybox -ti -- sh
 ```
+Exit from the interactive terminal
+```
+exit
+```
+
 
 Edit the Pod
 ```
 kubectl edit po busybox
 ```
-Change name or label of the pod.
+Change name or label of the pod, save the file and exit from the editor mode.
 
 Delete the pod with manifest created
 ```

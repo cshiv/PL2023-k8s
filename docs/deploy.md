@@ -35,4 +35,9 @@ Scale down by editing deployment object
 ```
 kubectl edit deploy deploy-busybox
 ```
-Modify the value in `spec.replicas`
+Set the value in `spec.replicas` to 2. Save the file and exit the editor.
+
+Delete the deployment 
+```
+kubectl delete deploy deploy-busybox
+```
