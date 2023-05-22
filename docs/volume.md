@@ -113,3 +113,12 @@ show databases;
 ```
 
 Observe the data is retained eventhough the initial pod was deleted.
+
+
+Exit the mysql prompt and container by exit.
+
+Kill the mysql pod !!!
+
+```
+ kubectl delete po mysql-2
+```

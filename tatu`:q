@@ -1,0 +1,50 @@
+[1mdiff --git a/docs/env.md b/docs/env.md[m
+[1mindex 9a02922..de92b6f 100644[m
+[1m--- a/docs/env.md[m
+[1m+++ b/docs/env.md[m
+[36m@@ -1 +1,7 @@[m
+[31m-# Instructions for using the environment[m
+\ No newline at end of file[m
+[32m+[m[32m# Instructions for using the environment[m
+[32m+[m
+[32m+[m[32m1. Copy the private key from the Github Gist into a file by name `key`[m
+[32m+[m[32m2. Change the permissions of the private key `chmod 600 key`[m
+[32m+[m[32m3. Using the IP provided, login to the machine with ssh by `ssh -i key ubuntu@<IP>`[m
+[32m+[m[32m4. Once you are logged into the machine, create and start the k8s cluster by running the command `k3d cluster create mycluster`. This might take 30 seconds[m[41m [m
+[32m+[m[32m5. Check if the cluster is up by running the following commands `kubectl version` , `kubectl get po -A`. There should be no errors or warnings if cluster is up and running.[m
+\ No newline at end of file[m
+[1mdiff --git a/docs/pod.md b/docs/pod.md[m
+[1mindex 5c99557..a128395 100644[m
+[1m--- a/docs/pod.md[m
+[1m+++ b/docs/pod.md[m
+[36m@@ -120,7 +120,8 @@[m [mEdit the Pod[m
+ ```[m
+ kubectl edit po busybox[m
+ ```[m
+[31m-Change name or label of the pod, save the file and exit from the editor mode.[m
+[32m+[m[32mChange label of the pod, save the file and exit from the editor mode. Observe that fields can be changed[m
+[32m+[m[32mNow try to change the sleep interval from 3600 to 7200s. Observe that the spec is not changeable.[m
+ [m
+ Delete the pod with manifest created[m
+ ```[m
+[1mdiff --git a/docs/volume.md b/docs/volume.md[m
+[1mindex 4b9eedf..e19b060 100644[m
+[1m--- a/docs/volume.md[m
+[1m+++ b/docs/volume.md[m
+[36m@@ -112,4 +112,13 @@[m [mCheck if `perconalive_2023` database is present[m
+ show databases;[m
+ ```[m
+ [m
+[31m-Observe the data is retained eventhough the initial pod was deleted.[m
+\ No newline at end of file[m
+[32m+[m[32mObserve the data is retained eventhough the initial pod was deleted.[m
+[32m+[m
+[32m+[m
+[32m+[m[32mExit the mysql prompt and container by exit.[m
+[32m+[m
+[32m+[m[32mKill the mysql pod !!![m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32m kubectl delete po mysql-2[m
+[32m+[m[32m```[m
+\ No newline at end of file[m

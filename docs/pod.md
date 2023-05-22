@@ -120,7 +120,8 @@ Edit the Pod
 ```
 kubectl edit po busybox
 ```
-Change name or label of the pod, save the file and exit from the editor mode.
+Change label of the pod, save the file and exit from the editor mode. Observe that fields can be changed
+Now try to change the sleep interval from 3600 to 7200s. Observe that the spec is not changeable.Not all the fields can be modified.
 
 Delete the pod with manifest created
 ```
